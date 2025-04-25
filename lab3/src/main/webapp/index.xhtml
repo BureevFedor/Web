@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<h:head>
+		<title>3ЛР Веб-Программирование</title>
+		<link rel="icon" href="#{resource['images/frog.png']}" target="head"/>
+		<h:outputStylesheet library="css" name="styles.css"/>
+	</h:head>
+
+	<h:body>
+		<header>
+			<div class="header">            
+				<h1 class="header">ЛАБОРАТОРНАЯ РАБОТА 3</h1>
+				<div>
+					<p class="header2">
+						Буреев Фёдор P3207 333975 вар. 17233
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="time">
+			Дата:
+			<br />
+			<span id="date"></span>
+			<br />
+			Время:
+			<br />
+			<span id="time"></span>
+		</div>
+
+		<h:form>
+			<h:commandButton action="main" value="Перейти на основную страницу"/>
+		</h:form>
+
+		<h:outputScript library="js" name="time.js"/>
+	</h:body>
+	
+</html>
