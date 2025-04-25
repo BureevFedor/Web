@@ -1,0 +1,126 @@
+/* ХАРАКТЕРИСТИКИ ТЕЛА */
+
+body {
+	font-family: Arial, Helvetica, "monospace";
+	background-image: url("images/back.jpg");
+	background-color: #c7b39b;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+    text-align: center;
+}
+
+/* ХАРАКТЕРИСТИКИ ДВУХ СПЕЦИАЛЬНЫХ КНОПОК (ССЫЛОК) */
+
+a.list {
+	color: red; 
+	text-decoration: none
+}
+a.list:hover {
+	color: purple; 
+	text-decoration: underline; 
+	background-color: powderblue;
+}
+
+/* ХАРАКТЕРИСТИКИ РАЗЛИЧНЫХ ИЗОБРАЖЕНИЙ*/
+
+img.image_a {
+	margin: 20px;
+}
+img.image_b {
+    height: auto;
+    width: auto;
+    max-width: 280px;
+    max-height: 240px;
+    margin: 20px;
+}
+
+/* ХАРАКТЕРИСТИКИ ТАБЛИЦЫ БЛОКОВ */
+
+.grid {
+    border: 1px solid #2f2f2f;
+    display: grid;
+    grid-template-columns: 606px 1.3fr 3fr;
+    background-color: gray;
+	background-image: url("images/frog.png");
+}
+.grid > * {
+    background-color: #b2b2b2;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+/* ХАРАКТЕРИСТИКИ ??? */
+div.wrapper {
+    margin: 0.5% 1% 2% 1%;
+    width: 98%;
+}
+div.container {
+    padding: 3px 6px 3px 6px;
+    font-size: 18px;
+}
+div.canvas {
+    padding-top: 58px;
+}
+div.back {
+    padding-top: 300px;
+}
+
+/* КНОПКИ */
+.custom {
+    display: flex;
+    padding-bottom: inherit;
+}
+
+.custom label {
+    white-space: nowrap;
+    padding-right: 1%;
+}
+
+div.pad_bot {
+    padding-bottom: 3px;
+}
+
+.custom select, .custom input {
+    flex: 1 1;
+}
+
+/* ХАРАКТЕРИСТИКИ ТАБЛИЦЫ ЗНАЧЕНИЙ */
+
+div.table {
+    height: 597px;
+    overflow-y: auto;
+    margin-bottom: -6px;
+    margin-top: 20px;
+}
+table {
+    border: 1px solid #333;
+    width: 100%;
+}
+td {
+    border: 2px solid #000000;
+}
+thead {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    width: 100%;
+}
+
+/* ХАРАКТЕРИСТИКИ РАЗНЫХ ЗАГОЛОВКОВ */
+
+header {
+    width: 95%;
+    background: #b2b2b2;
+    font-family: monospace;
+    border-radius: 120px;
+	background-image: url("images/frog.png");
+}
+
+.header {
+    padding: 1px 1% 1% 1%;
+}
+
+.header2 {
+    padding: 0 0 0 1%;
+}

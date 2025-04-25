@@ -1,0 +1,3 @@
+models\Entry.class
+servlets\ControllerServlet.class
+servlets\AreaCheckServlet.class
