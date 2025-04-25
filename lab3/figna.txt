@@ -1,0 +1,83 @@
+Если компонент допускает ввод заведомо некорректных данных (таких, например, как буквы в координатах точки или отрицательный радиус), то приложение должно осуществлять их валидацию.
+
+persistence.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="examplePU">
+        <jta-data-source>java:/jboss/example-ds</jta-data-source>
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>model.Entry</class>
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+            <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.jdbc.user" value="postgres"/>
+            <property name="eclipselink.jdbc.password" value="1234"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+https://eclipse.dev/eclipselink/documentation/2.4/jpa/extensions/p_ddl_generation.htm
+
+
+
+
+<errMsg=<h:outputText id="errMsg" value="#{entries.errMsg}" />
+
+
+
+
+
+            <div class="custom">
+                <label for="y_coords"><b>Y : </b></label>
+                <h:inputText name="y" maxlength="5" id="Y" placeholder="от -3 до 3" value="#{entries.currY}"
+                    required="true" requiredMessage="Y должно быть от -3 до 3"
+                    validatorMessage="Y должно быть от -3 до 3"
+                    converterMessage="Y должно быть от -3 до 3"
+                    onchange="document.getElementById('ybutton').click();"
+                    valueChangeListener="#{entries.dosomething}">
+                    <f:validateDoubleRange minimum="-3.0" maximum="3.0" />
+                </h:inputText>
+
+
+                <h:inputText value="#{managedBean.val}" > 
+                    <f:ajax event="blur" render="result" listener="#{managedBean.test}"/> 
+                </h:inputText>        
+
+
+                <h:commandButton id="ybutton" actionListener="#{entries.fakeaction}" style="display:none;" update="inputForm:errMsg" />
+            </div>
+
+
+
+                                        onkeypress="return event.keyCode!=13"
+
+
+
+
+
+                <h:inputText name="y" maxlength="5" id="Y" placeholder="от -3 до 3" value="#{entries.currY}"
+                    required="true" requiredMessage="Y должно быть от -3 до 3"
+                    validatorMessage="Y должно быть от -3 до 3"
+                    converterMessage="Y должно быть от -3 до 3"
+                    onchange="updateX();">
+                    <f:validateDoubleRange minimum="-3.0" maximum="3.0" />
+                </h:inputText>
+
+
+
+
+
+        onchange="updateX();"
+        onblur="updateX();"
+        onfocus="updateX();"
+
+
+<f:ajax event="change"/>
+<f:ajax event="keyup" render=":searchResult"/>
