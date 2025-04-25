@@ -1,0 +1,25 @@
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>CorsFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>http://localhost:3000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+
+    <filters>
+        <response-header name="server-header" header-name="Server" header-value="WildFly/10"/>
+        <response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/1"/>
+        <response-header name="Access-Control-Allow-Origin" header-name="Access-Control-Allow-Origin" header-value="*"/>
+        <response-header name="Access-Control-Allow-Methods" header-name="Access-Control-Allow-Methods" header-value="GET, POST, OPTIONS, PUT"/>
+        <response-header name="Access-Control-Allow-Headers" header-name="Access-Control-Allow-Headers" header-value="accept, authorization, content-type, x-requested-with"/>
+        <response-header name="Access-Control-Allow-Credentials" header-name="Access-Control-Allow-Credentials" header-value="true"/>
+        <response-header name="Access-Control-Max-Age" header-name="Access-Control-Max-Age" header-value="1"/>
+    </filters>

@@ -1,0 +1,10 @@
+beans\UsersBean.class
+RestApplication.class
+entities\UserEntity.class
+validators\UserValidator.class
+entities\EntryEntity.class
+validators\EntryValidator.class
+controller\User.class
+controller\Entry.class
+beans\EntriesBean.class
+CorsFilter.class
